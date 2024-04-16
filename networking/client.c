@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <winsock2.h>
 
-#define SERVER_IP "169.254.176.170"
+#define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 12345
 #define BUFFER_SIZE 1024
 
