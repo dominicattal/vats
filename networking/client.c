@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <winsock2.h>
 
-#define SERVER_IP "127.0.0.1"
+#define SERVER_IP "10.204.133.55"
 #define SERVER_PORT 12345
 #define BUFFER_SIZE 1024
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
     }
 
     // Create socket
-    if ((client_socket = socket(AF_INET, SOCK_DGRAM, 0)) == INVALID_SOCKET) {
+    if ((client_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == INVALID_SOCKET) {
         printf("Could not create socket : %d", WSAGetLastError());
         WSACleanup();
         return 1;
