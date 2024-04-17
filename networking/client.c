@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     struct sockaddr_in server_addr;
     int recv_len;
     char buffer[BUFFER_SIZE];
-
+    puts("A");
     // Initialize Winsock
     if (WSAStartup(MAKEWORD(2,2), &wsa) != 0) {
         printf("Failed. Error Code : %d", WSAGetLastError());
