@@ -12,6 +12,7 @@ int main(int argc, char **argv) {
     int recv_len;
     char buffer[BUFFER_SIZE];
     puts("A");
+    return;
     // Initialize Winsock
     if (WSAStartup(MAKEWORD(2,2), &wsa) != 0) {
         printf("Failed. Error Code : %d", WSAGetLastError());
