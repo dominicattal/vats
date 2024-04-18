@@ -99,12 +99,12 @@ int main(int argc, char **argv) {
         WSACleanup();
         return 1;
     }
-
+    puts("A");
     struct thread_args args;
     args.client_socket = client_socket;
     args.server_addr = server_addr;
     pthread_create(&thread_id, NULL, listener, &args);
-
+    puts("B");
     recv_len = recvfrom(client_socket, buffer, BUFFER_SIZE, 0, NULL, NULL);
     if (recv_len == SOCKET_ERROR) {
         printf("Recv failed : %d", WSAGetLastError());
